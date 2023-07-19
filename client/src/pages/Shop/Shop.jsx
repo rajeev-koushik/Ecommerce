@@ -13,20 +13,14 @@ export const Shop = () => {
             Collection
             <KeyboardArrowDownIcon />
           </h2>
-        </div>
-        <div className="filterItem">
           <h2>
             Color
             <KeyboardArrowDownIcon />
           </h2>
-        </div>
-        <div className="filterItem">
           <h2>
             Category
             <KeyboardArrowDownIcon />
           </h2>
-        </div>
-        <div className="filterItem">
           <h2>Price Range</h2>
           <div className="inputItem">
             <span>$0</span>
