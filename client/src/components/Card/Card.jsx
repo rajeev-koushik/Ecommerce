@@ -18,9 +18,7 @@ export const Card = ({ item }) => {
         </div>
         <div className="rating">
           <span>Ratings: {item.rating}</span>
-          <div className="cart">
-            <AddShoppingCartOutlinedIcon />
-          </div>
+          <AddShoppingCartOutlinedIcon />
         </div>
       </div>
     </Link>
