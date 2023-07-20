@@ -1,8 +1,11 @@
+// Implementing the shopping cart feature
+
 import React from "react";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import "./Cart.scss";
 
 export const Cart = () => {
+  // loading dummy data
   const data = [
     {
       id: 1,

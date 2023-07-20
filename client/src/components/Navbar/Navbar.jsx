@@ -1,3 +1,5 @@
+// This component helps navigate across the different pages
+
 import React, { useState } from "react";
 import { Cart } from "../Cart/Cart";
 import { Link } from "react-router-dom";

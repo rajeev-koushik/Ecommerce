@@ -1,3 +1,5 @@
+// This page will load the details for each product selected
+
 import React, { useState } from "react";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import "./Product.scss";
@@ -5,6 +7,7 @@ import "./Product.scss";
 export const Product = () => {
   const [selectedImg, setSelectedImg] = useState(0);
 
+  // loading dummy images
   const images = [
     "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/6045051/pexels-photo-6045051.jpeg?auto=compress&cs=tinysrgb&w=1600",

@@ -1,3 +1,5 @@
+// This page will list all the products available on the site
+
 import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "./Shop.scss";

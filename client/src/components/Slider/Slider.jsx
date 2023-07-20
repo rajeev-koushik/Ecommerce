@@ -1,3 +1,5 @@
+// Implementing the sliding images carousel for the landing page
+
 import React, { useState } from "react";
 import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
@@ -6,6 +8,7 @@ import "./Slider.scss";
 export const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // loading dummy images
   const data = [
     "https://images.pexels.com/photos/6480707/pexels-photo-6480707.jpeg?auto=compress&cs=tinysrgb&w=1600",
     "https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&w=1600",

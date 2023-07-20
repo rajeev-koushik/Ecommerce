@@ -1,8 +1,11 @@
+// Using the card component to list out all the products
+
 import React from "react";
 import { Card } from "../Card/Card";
 import "./List.scss";
 
 export const List = () => {
+  // loading dummy data
   const data = [
     {
       id: 1,
