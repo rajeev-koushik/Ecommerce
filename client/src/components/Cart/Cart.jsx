@@ -28,7 +28,7 @@ export const Cart = () => {
       ))}
       <div className="total">
         <h3>TOTAL</h3>
-        <h3>${item.price}</h3>
+        <h3>$123</h3>
       </div>
       <button>Checkout</button>
     </div>
