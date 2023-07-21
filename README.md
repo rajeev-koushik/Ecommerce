@@ -7,7 +7,7 @@ Back end: Python (FastAPI)
 
 ## Getting Started
 
-First, install the dependencies:
+For frontend:
 
 ```bash
 cd client
@@ -22,4 +22,15 @@ Then, run the development server:
 npm run dev
 # or
 yarn dev
+```
+
+For backend:
+Recommended to create a virtual environment and install dependencies there
+
+```bash
+cd api
+python3 -m venv venv
+source venv/Scripts/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
 ```
