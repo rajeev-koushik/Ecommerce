@@ -8,7 +8,6 @@ import "./Product.scss";
 export const Product = () => {
   const value = useParams().id;
   const id = parseInt(value);
-  console.log("id ", id);
   const [loading, setLoading] = useState(true);
   const [selectedImg, setSelectedImg] = useState(0);
   const [records, setRecords] = useState([]);
