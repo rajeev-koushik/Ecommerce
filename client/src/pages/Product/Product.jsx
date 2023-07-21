@@ -1,31 +1,39 @@
 // This page will load the details for each product selected
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import "./Product.scss";
 
 export const Product = () => {
+  const value = useParams().id;
+  const id = parseInt(value);
+  console.log("id ", id);
   const [selectedImg, setSelectedImg] = useState(0);
+  const [records, setRecords] = useState([]);
 
-  // loading dummy images
-  const images = [
-    "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/6045051/pexels-photo-6045051.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  ];
+  useEffect(() => {
+    fetch(`http://127.0.0.1:8000/product/${id}`)
+      .then((res) => res.json())
+      .then((data) => setRecords(data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log("records ", records);
 
   return (
     <div className="product">
       <div className="left">
         <div className="images">
-          <img src={images[0]} alt="" onClick={(e) => setSelectedImg(0)} />
-          <img src={images[1]} alt="" onClick={(e) => setSelectedImg(1)} />
+          <img src={records?.images[0]} onClick={(e) => setSelectedImg(0)} />
+          <img src={records?.images[1]} onClick={(e) => setSelectedImg(1)} />
         </div>
         <div className="mainImg">
-          <img src={images[selectedImg]} alt="" />
+          <img src={records?.images[selectedImg]} />
         </div>
       </div>
       <div className="right">
-        <h1>Title</h1>
+        <h1>{records?.title}</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
           vitae quod dicta repudiandae? Quaerat deleniti velit accusantium
@@ -34,7 +42,7 @@ export const Product = () => {
         </p>
         <span>Price per unit</span>
         <div className="add">
-          <h2>Price</h2>
+          <h2>${records?.price}</h2>
           <button>Buy Now</button>
           <AddShoppingCartOutlinedIcon />
         </div>

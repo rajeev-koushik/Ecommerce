@@ -9,10 +9,8 @@ export const Cart = () => {
   const data = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       title: "Couch",
       price: "5,000",
-      rating: "4/5",
     },
   ];
 

@@ -10,7 +10,7 @@ export const Card = ({ item }) => {
     <Link className="link" to={`/product/${item.id}`}>
       <div className="card">
         <div className="image">
-          <img src={item.img} alt="" className="mainImg" />
+          <img src={item.images[0]} className="mainImg" />
         </div>
         <div className="price">
           <div className="title">
