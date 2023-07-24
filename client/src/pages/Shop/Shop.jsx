@@ -31,7 +31,7 @@ export const Shop = () => {
           </div>
         </div>
       </div>
-      <div className="right">
+      <div className="right" data-testid="products">
         <List />
       </div>
     </div>
