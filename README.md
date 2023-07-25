@@ -41,11 +41,12 @@ To run the backend server:
 uvicorn main:app --reload
 ```
 
-## To run tests
+## Running tests
 
-Jest has been implemented to test the frontend components. To run the test script:
+Jest has been implemented to test the Slider component in the Home page. To run the test script:
 
 ```bash
+cd client
 npm run test
 # or
 yarn test
