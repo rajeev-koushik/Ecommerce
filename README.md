@@ -32,5 +32,21 @@ cd api
 python3 -m venv venv
 source venv/Scripts/activate
 pip install -r requirements.txt
+```
+
+To run the backend server:
+
+```bash
+# ensure venv is activated
 uvicorn main:app --reload
+```
+
+## To run tests
+
+Jest has been implemented to test the frontend components. To run the test script:
+
+```bash
+npm run test
+# or
+yarn test
 ```
